@@ -11,4 +11,15 @@ class HomeController extends Controller
         $employees= Employee::all();
         return view('welcome',compact('employees'));
     }
+
+    public function  updateEmployee($id){
+        return view('updateEmployee',compact('id'));
+}
+
+public function deleteEmployee($id){
+        $employee=Employee::findorfail($id);
+        $employee->delete();
+        return redirect('/');
+
+}
 }

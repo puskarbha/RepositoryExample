@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class,'index']);
+Route::get('/updateEmployee/{id}',[HomeController::class,'updateEmployee'])->name('updateEmployee');
+Route::get('/deleteEmployee/{id}',[HomeController::class,'deleteEmployee'])->name('deleteEmployee');
+

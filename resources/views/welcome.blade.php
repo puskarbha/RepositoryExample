@@ -39,8 +39,10 @@
         <td>{{$employee->name}}</td>
         <td>{{$employee->address}}</td>
         <td>{{$employee->contact}}</td>
-        <td><button class="btn btn-primary">Update</button></td>
-        <td><button class="btn btn-danger">Delete</button></td>
+        <td>
+            <a href="{{ route('updateEmployee', ['id' => $employee->id]) }}" class="btn btn-primary">Update</a>
+        </td>
+        <td><a href="{{route('deleteEmployee',['id'=>$employee->id]) }}" class="btn btn-danger">Delete</a></td>
     </tr>
     @endforeach
 </table>
